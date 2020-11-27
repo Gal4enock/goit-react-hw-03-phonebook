@@ -23,7 +23,7 @@ class App extends Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    return (this.state.contacts ? localStorage.setItem('contacts', JSON.stringify(this.state.contacts)) : '')
+    return (this.state.contacts ? localStorage.setItem('contacts', JSON.stringify(this.state.contacts)) : [])
   }
 
   handleChange = (e) => {
@@ -59,7 +59,7 @@ class App extends Component {
   }
    handleFilter = () => {
       const { contacts, filter } = this.state;
-      return (contacts.length ? contacts.filter((contact => contact.name.toLowerCase().includes(filter.toLowerCase()) )) : '')
+      return (contacts.length ? contacts.filter((contact => contact.name.toLowerCase().includes(filter.toLowerCase()) )) : [])
       
     }
     

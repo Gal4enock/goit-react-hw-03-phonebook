@@ -4,7 +4,7 @@ import style from "./Contacts.module.css";
 
 const Contacts = function ({contacts, onDelete}) {
   return (<ul className={style.list}>
-    {contacts.length ? contacts.map(contact => <li className={style.item} key={contact.id}>{contact.name}: {contact.number} <button onClick={ () => onDelete(contact.id)} type='button'>Delete</button> </li>) : ''}
+    {contacts.length ? contacts.map(contact => <li className={style.item} key={contact.id}>{contact.name}: {contact.number} <button onClick={ () => onDelete(contact.id)} type='button'>Delete</button> </li>) : []}
   </ul>)
 }
 
